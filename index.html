@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TRUST STYLE — Красноярск</title>
+<meta name="description" content="TRUST STYLE — молодёжная одежда и обувь в Красноярске. Самовывоз из ТЦ «Хамелеон», Карла Маркса 125.">
+<meta name="theme-color" content="#0A0A09">
+<link rel="icon" href="img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="top">
+    <a class="brand" href="#top" aria-label="TRUST STYLE, на главную"><img src="img/logo.webp" alt=""><span>TRUST STYLE</span></a>
+    <div class="top-actions">
+      <button class="icon-btn" data-act="open" data-val="cart" aria-label="Корзина"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8h13l-1 12h-11l-1-12z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="badge" id="cartBadge" hidden>0</span></button>
+      <button class="icon-btn" data-act="open" data-val="menu" aria-label="Меню"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="eyebrow"><i class="dot"></i>Красноярск · ТЦ «Хамелеон»</div>
+      <h1>Стиль,<br>которому<br><span class="accent">доверяют</span></h1>
+      <p class="lead">Молодёжная одежда и обувь. Выберите вещь — менеджер ответит в Telegram.</p>
+      <div class="hero-media">
+        <img src="img/puffer-lime.webp" alt="Пуховик оверсайз, лайм">
+        <div class="tags"><span class="tag accent-tag">Новое поступление</span><span class="tag">Куртки · Зима</span></div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-accent" href="#catalog">Смотреть каталог</a>
+        <button class="btn btn-ghost" data-act="open" data-val="about">Как нас найти</button>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track">
+      <span>КУРТКИ / КРОССОВКИ / ХУДИ / СВИТШОТЫ / КЕПКИ / ШАПКИ / БОТИНКИ / КОФТЫ /</span>
+      <span>КУРТКИ / КРОССОВКИ / ХУДИ / СВИТШОТЫ / КЕПКИ / ШАПКИ / БОТИНКИ / КОФТЫ /</span>
+    </div></div>
+
+    <section class="section" id="catalog" aria-labelledby="catTitle">
+      <div class="sec-head"><h2 id="catTitle">Каталог</h2><span class="muted" id="countLabel"></span></div>
+      <div class="chips" id="catChips" role="group" aria-label="Категории"></div>
+      <div class="chips sub" id="seasonChips" role="group" aria-label="Сезон" hidden></div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <div class="note note-block">
+      <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+      <div class="note-text"><strong>Доставки нет — только самовывоз</strong><span>Карла Маркса 125, ТЦ «Хамелеон» · 11:00–20:00</span></div>
+    </div>
+
+    <section class="section reviews" id="reviews" aria-labelledby="revTitle">
+      <div class="sec-head"><h2 id="revTitle">Отзывы</h2><button class="link-btn" data-act="open" data-val="reviews">Все отзывы →</button></div>
+      <div class="rev-row" id="reviewRow"></div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="aboutEyebrow">
+      <span class="eyebrow-accent" id="aboutEyebrow">О нас</span>
+      <div class="about-body" id="aboutSection"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="foot-brand"><img src="img/logo.webp" alt=""><span>TRUST<br>STYLE</span></div>
+    <div class="foot-grid">
+      <nav class="foot-col" aria-label="Разделы">
+        <span class="foot-h">Магазин</span>
+        <a href="#catalog">Каталог</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#about">О нас</a>
+      </nav>
+      <div class="foot-col">
+        <span class="foot-h">Контакты</span>
+        <span>Карла Маркса 125, ТЦ «Хамелеон»</span>
+        <span>11:00 – 20:00</span>
+        <a href="https://www.tiktok.com/@trust.style" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+    <a class="btn btn-light" data-tg-link href="https://t.me/" target="_blank" rel="noopener">Написать менеджеру в Telegram</a>
+    <div class="foot-bottom"><span>© 2026 TRUST STYLE</span><span>Красноярск</span></div>
+  </footer>
+</div>
+
+<div class="scrim" id="scrim"></div>
+
+<section class="sheet" id="sheet-product" role="dialog" aria-modal="true" aria-label="Карточка товара" aria-hidden="true"><div class="grab"></div><div class="sheet-body"></div></section>
+<section class="sheet" id="sheet-cart" role="dialog" aria-modal="true" aria-label="Корзина" aria-hidden="true"><div class="grab"></div><div class="sheet-body"></div></section>
+<section class="sheet" id="sheet-tg" role="dialog" aria-modal="true" aria-label="Переход в Telegram" aria-hidden="true"><div class="grab"></div><div class="sheet-body"></div></section>
+
+<section class="sheet" id="sheet-menu" role="dialog" aria-modal="true" aria-label="Меню" aria-hidden="true"><div class="grab"></div><div class="sheet-body">
+  <div class="sheet-head"><div class="brand-sm"><img src="img/logo.webp" alt=""><span>TRUST STYLE</span></div><button class="icon-btn solid" data-act="close" aria-label="Закрыть"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <nav class="menu-links">
+    <button class="menu-link" data-act="scroll" data-val="#catalog"><span>Каталог</span><span class="arr" aria-hidden="true">→</span></button>
+    <button class="menu-link" data-act="open" data-val="reviews"><span>Отзывы</span><span class="arr" aria-hidden="true">→</span></button>
+    <button class="menu-link" data-act="open" data-val="about"><span>О нас</span><span class="arr" aria-hidden="true">→</span></button>
+    <button class="menu-link" data-act="open" data-val="cart"><span>Корзина<span class="count-pill" id="menuCount" hidden>0</span></span><span class="arr" aria-hidden="true">→</span></button>
+  </nav>
+  <span class="label">Категории</span>
+  <div class="chips wrap" style="margin-top:10px" id="menuCats"></div>
+  <div class="note flat"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div class="note-text"><strong>Карла Маркса 125, ТЦ «Хамелеон»</strong><span>Открыто 11:00 – 20:00 · только самовывоз</span></div></div>
+  <div class="row-btns"><a class="btn btn-accent" data-tg-link href="https://t.me/" target="_blank" rel="noopener">Telegram</a><a class="btn btn-ghost" href="https://www.tiktok.com/@trust.style" target="_blank" rel="noopener">TikTok</a></div>
+</div></section>
+
+<section class="sheet" id="sheet-reviews" role="dialog" aria-modal="true" aria-label="Отзывы" aria-hidden="true"><div class="grab"></div><div class="sheet-body">
+  <div class="sheet-head"><div class="row-gap"><h2>Отзывы</h2><span class="muted">Telegram и TikTok</span></div><button class="icon-btn solid" data-act="close" aria-label="Закрыть"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="filters" id="revFilters"></div>
+  <div id="reviewList"></div>
+  <div style="margin-top:16px"><a class="btn btn-accent" data-tg-link href="https://t.me/" target="_blank" rel="noopener">Оставить отзыв в Telegram</a></div>
+</div></section>
+
+<section class="sheet" id="sheet-about" role="dialog" aria-modal="true" aria-label="О нас" aria-hidden="true"><div class="grab"></div><div class="sheet-body about-body" id="aboutSheetBody"></div></section>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <img id="toastImg" alt="">
+  <div class="toast-text"><strong id="toastTitle"></strong><span id="toastSub"></span></div>
+  <button id="toastBtn" data-act="toastAction"></button>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
